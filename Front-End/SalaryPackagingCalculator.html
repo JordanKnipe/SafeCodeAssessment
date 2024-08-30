@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Packaging Calculator</title>
+    <link rel="stylesheet" href="./SalaryPackagingCalculator.css">
+</head>
+<body>
+    <div class="main">
+        <div class="salary-packaging-calculator">
+    <h1 id="calculator-header">Salary Packaging Calculator</h1>
+    
+    <form id="salaryPackageCalculatorForm">
+
+        <div id="salary-container" class="selector-container">
+        <input type="number" id="salary" name="salary" placeholder="Enter Salary">
+        <span id="salaryError" class="error-message"></span>
+        </div>
+
+        <div id="industry-container" class="selector-container">
+        <label for="industry">Industry:</label>
+        <select name="industry" id="industry">
+            <option value="default" selected > please select... </option>
+            <option value="corporate">Corporate</option>
+            <option value="hospital">Hospital</option>
+            <option value="pbi">PBI</option>
+        </select>
+
+        <span id="industryError" class="error-message"></span>
+    </div>
+       
+        <div id="employment-container" class="selector-container">
+        <label for="employment">Employment:</label>
+        <select name="employment" id="employment">
+            <option value="default" selected > please select... </option>
+            <option value="fullTime">Full-Time</option>
+            <option value="partTime">Part-Time</option>
+            <option value="casual">Casual</option>
+        </select>
+
+        <span id="employmentError" class="error-message"></span>
+        <div id="hours-container" class="selector-container" style="display: none;">
+            <label for="hoursWorked">Hours Worked:</label>
+            <input type="number" id="hoursWorked" name="hoursWorked" placeholder="Enter hours out of 38">
+            <span id="hoursError" class="error-message"></span>
+        </div>
+        </div>
+        
+        <div id="education-container" class="selector-container">
+        <label for="education">Education Level:</label>
+        <select name="education" id="education">
+            <option value="default" selected > please select... </option>
+            <option value="higherEducation">Bachelors or higher</option>
+            <option value="lowerEducation">Diploma or lower</option>
+        </select>
+        <span id="educationError" class="error-message"></span>
+        </div>
+        
+        <input type="submit" value="Calculate Limit">
+
+        <div class="salary-sacrifice-limit-container">
+
+            <span id="salary-sacrifice-limit"> </span>
+
+        </div>
+    </form>
+</div>
+</div>
+
+    <script src="./SalaryPackagingService/SalaryPackagingService.js"></script>
+</body>
+</html>
